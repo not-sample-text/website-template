@@ -27,7 +27,11 @@ header .line {
 
 header .link-list {
 	@apply bg-[#f5f6f9] capitalize;
-	/* @apply max-xl:hidden; */
+	@apply max-xl:hidden;
+}
+
+header .link-list .wrapper {
+	@apply p-0;
 }
 
 header .link-list > div {
@@ -35,7 +39,7 @@ header .link-list > div {
 }
 
 header .link-list a {
-	@apply p-2 -ml-1;
+	@apply inline-block p-3;
 	@apply hover:bg-[#333] hover:text-[#f5f6f9];
 }
 header a.for-home {

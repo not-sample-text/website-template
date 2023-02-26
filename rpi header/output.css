@@ -60,7 +60,16 @@ header .link-list {
   --tw-bg-opacity: 1;
   background-color: rgb(245 246 249 / var(--tw-bg-opacity));
   text-transform: capitalize;
-  /* @apply max-xl:hidden; */
+}
+
+@media not all and (min-width: 1280px) {
+  header .link-list {
+    display: none;
+  }
+}
+
+header .link-list .wrapper {
+  padding: 0px;
 }
 
 header .link-list > div {
@@ -70,8 +79,8 @@ header .link-list > div {
 }
 
 header .link-list a {
-  margin-left: -0.25rem;
-  padding: 0.5rem;
+  display: inline-block;
+  padding: 0.75rem;
 }
 
 header .link-list a:hover {
