@@ -1,0 +1,26 @@
+header {
+	font-family: "Roboto";
+	@apply border-b border-red-500;
+}
+
+header .wrapper {
+	@apply flex flex-row items-center justify-between py-2 w-[80vw] mx-auto;
+}
+
+header .site-title {
+	@apply text-3xl flex flex-row items-center m-0 gap-x-2;
+}
+
+header .site-title span {
+	@apply text-4xl;
+}
+
+header .hamburger-menu {
+	@apply hidden flex-col gap-y-3 w-8;
+	@apply max-xl:flex;
+}
+
+header .line {
+	scale: 1 2;
+	@apply w-full h-px bg-stone-500 rounded-full;
+}

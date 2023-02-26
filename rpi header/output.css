@@ -1,0 +1,56 @@
+header {
+  font-family: "Roboto";
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
+header .wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 80vw;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+header .site-title {
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+header .site-title span {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+header .hamburger-menu {
+  display: none;
+  width: 2rem;
+  flex-direction: column;
+  row-gap: 0.75rem;
+}
+
+@media not all and (min-width: 1280px) {
+  header .hamburger-menu {
+    display: flex;
+  }
+}
+
+header .line {
+  scale: 1 2;
+  height: 1px;
+  width: 100%;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(120 113 108 / var(--tw-bg-opacity));
+}

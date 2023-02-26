@@ -1,9 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 footer {
 	font-family: "Roboto";
 	@apply text-[#333] bg-[#f5f6f9];
@@ -13,32 +7,32 @@ footer a {
 	@apply hover:underline;
 }
 
-div.wrapper {
+footer .wrapper {
 	@apply flex flex-wrap py-8 gap-y-4 w-[75vw] mx-auto;
 	@apply max-sm:w-screen max-sm:px-10;
 }
 
-.header {
+footer .header {
 	@apply font-bold capitalize;
 }
 
-div.col {
+footer .col {
 	@apply flex flex-col w-1/4;
 	@apply max-lg:w-1/2;
 	@apply max-sm:w-full max-sm:justify-start;
 }
-div.col > div {
+footer .col > div {
 	@apply flex flex-col mb-4;
 }
 
-div.col a {
+footer .col a {
 	@apply leading-10 inline-flex;
 }
 
-div.socials > div {
+footer .socials > div {
 	@apply flex flex-row items-center gap-x-2;
 }
 
-span.ti {
+footer span.ti {
 	@apply text-2xl;
 }
