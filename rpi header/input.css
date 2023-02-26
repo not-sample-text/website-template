@@ -1,14 +1,14 @@
 header {
 	font-family: "Roboto";
-	@apply border-b border-red-500;
+	@apply border-b border-stone-300 text-[#333];
 }
 
 header .wrapper {
-	@apply flex flex-row items-center justify-between py-2 w-[80vw] mx-auto;
+	@apply flex flex-row items-center justify-between py-3 w-[80vw] mx-auto;
 }
 
 header .site-title {
-	@apply text-3xl flex flex-row items-center m-0 gap-x-2;
+	@apply text-3xl flex flex-row items-center gap-x-2;
 }
 
 header .site-title span {
@@ -23,4 +23,26 @@ header .hamburger-menu {
 header .line {
 	scale: 1 2;
 	@apply w-full h-px bg-stone-500 rounded-full;
+}
+
+header .link-list {
+	@apply bg-[#f5f6f9] capitalize;
+	/* @apply max-xl:hidden; */
+}
+
+header .link-list > div {
+	@apply flex flex-row items-center;
+}
+
+header .link-list a {
+	@apply p-2 -ml-1;
+	@apply hover:bg-[#333] hover:text-[#f5f6f9];
+}
+header a.for-home {
+	@apply text-[#53ce63];
+	@apply hover:text-[#f5f6f9] hover:bg-[#53ce63];
+}
+
+header a.for-industry {
+	@apply font-bold;
 }

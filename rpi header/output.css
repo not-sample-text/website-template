@@ -2,7 +2,9 @@ header {
   font-family: "Roboto";
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+  border-color: rgb(214 211 209 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
 }
 
 header .wrapper {
@@ -13,12 +15,11 @@ header .wrapper {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 header .site-title {
-  margin: 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -53,4 +54,45 @@ header .line {
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(120 113 108 / var(--tw-bg-opacity));
+}
+
+header .link-list {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 246 249 / var(--tw-bg-opacity));
+  text-transform: capitalize;
+  /* @apply max-xl:hidden; */
+}
+
+header .link-list > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header .link-list a {
+  margin-left: -0.25rem;
+  padding: 0.5rem;
+}
+
+header .link-list a:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(245 246 249 / var(--tw-text-opacity));
+}
+
+header a.for-home {
+  --tw-text-opacity: 1;
+  color: rgb(83 206 99 / var(--tw-text-opacity));
+}
+
+header a.for-home:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(83 206 99 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(245 246 249 / var(--tw-text-opacity));
+}
+
+header a.for-industry {
+  font-weight: 700;
 }
