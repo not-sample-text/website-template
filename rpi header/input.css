@@ -1,14 +1,15 @@
 /**TODO
-* dropdown
+* align nav links with .site-title
 */
 
 header {
 	font-family: "Roboto";
-	@apply border-b border-stone-300 text-[#333];
+	@apply text-[#333];
 }
 
 header .wrapper {
-	@apply flex flex-row items-center justify-between py-3 w-[80vw] mx-auto;
+	@apply flex flex-row items-center justify-between py-3 w-[75vw] mx-auto;
+	@apply max-md:w-screen max-md:px-3;
 }
 
 header .site-title {
@@ -20,13 +21,23 @@ header .site-title span {
 }
 
 header .hamburger-menu {
-	@apply hidden flex-col gap-y-3 w-8;
+	@apply hidden flex-col gap-y-3 w-8 text-4xl relative h-7;
 	@apply max-xl:flex;
 }
 
 header .line {
 	scale: 1 2;
-	@apply w-full h-px bg-stone-500 rounded-full;
+	@apply w-full h-px bg-stone-500 rounded-full absolute;
+}
+
+header .line-top {
+	@apply top-0;
+}
+header .line-middle {
+	@apply top-1/2;
+}
+header .line-bottom {
+	@apply top-full;
 }
 
 header .link-list {
@@ -43,14 +54,39 @@ header .link-list > div {
 }
 
 header .link-list a {
-	@apply inline-block p-3;
+	@apply inline-block p-3 capitalize;
 	@apply hover:bg-[#333] hover:text-[#f5f6f9];
 }
-header a.for-home {
-	@apply text-[#53ce63];
+header .link-list a.for-home {
+	@apply text-[#53ce63] font-bold;
 	@apply hover:text-[#f5f6f9] hover:bg-[#53ce63];
 }
 
-header a.for-industry {
+header .link-list a.for-industry {
+	@apply font-bold;
+}
+header div.border-bottom {
+	@apply border-b border-stone-300;
+}
+
+header nav {
+	@apply hidden;
+}
+
+header .nav-wrapper {
+	@apply text-2xl capitalize flex flex-col;
+}
+
+header .nav-wrapper a {
+	@apply border-b border-stone-300 p-3;
+	@apply hover:bg-[#333] hover:text-[#f5f6f9];
+}
+
+header .nav-wrapper a.for-home {
+	@apply text-[#53ce63] font-bold;
+	@apply hover:text-[#f5f6f9] hover:bg-[#53ce63];
+}
+
+header .nav-wrapper a.for-industry {
 	@apply font-bold;
 }
