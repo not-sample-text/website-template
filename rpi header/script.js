@@ -5,13 +5,18 @@ $(document).ready(function () {
 		line2 = $("header .line:nth-child(2)"),
 		line3 = $("header .line:nth-child(3)");
 
+	let clicked = 0;
+
 	menu.on("click", function () {
-		if (dropdown.is(":visible")) {
+		console.log(clicked);
+		if (clicked == 1) {
 			dropdown.hide();
 			deanimateLines();
+			clicked = 0;
 		} else {
 			dropdown.show();
 			animateLines();
+			clicked++;
 		}
 	});
 
