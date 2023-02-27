@@ -6,29 +6,28 @@ $(document).ready(function () {
 		line3 = $("header .line:nth-child(3)");
 
 	menu.on("click", function () {
-		toggleDropDown();
-		animateLines();
+		if (dropdown.is(":visible")) {
+			dropdown.hide();
+			deanimateLines();
+		} else {
+			dropdown.show();
+			animateLines();
+		}
 	});
 
-	function toggleDropDown() {
-		if (!dropdown.is(":visible")) {
-			dropdown.show();
-		} else {
-			dropdown.hide();
-		}
+	function animateLines() {
+		line1.css("animation-name", "rotate-top");
+
+		line2.css("animation-name", "dissappear");
+
+		line3.css("animation-name", "rotate-bottom");
 	}
 
-	function animateLines() {
-		if (dropdown.is(":visible")) {
-			line1.css("animation-name", "rotate-top");
+	function deanimateLines() {
+		line1.css("animation-name", "unrotate-top");
 
-			line2.css("animation-name", "dissapear");
+		line2.css("animation-name", "appear");
 
-			line3.css("animation-name", "rotate-bottom");
-		} else {
-			line1.removeAttr("style");
-			line2.removeAttr("style");
-			line3.removeAttr("style");
-		}
+		line3.css("animation-name", "unrotate-bottom");
 	}
 });

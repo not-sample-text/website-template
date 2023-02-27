@@ -1,5 +1,5 @@
 /**TODO
-* align nav links with .site-title
+* 
 */
 
 header {
@@ -116,9 +116,45 @@ header .nav-wrapper a.for-industry {
 	}
 }
 
-@keyframes dissapear {
+@keyframes dissappear {
 	to {
 		opacity: 0;
 		width: 0;
+	}
+}
+
+@keyframes unrotate-top {
+	from {
+		rotate: 45deg;
+		top: 50%;
+	}
+
+	to {
+		rotate: 0;
+		top: 0;
+	}
+}
+
+@keyframes unrotate-bottom {
+	from {
+		rotate: 45deg;
+		top: 50%;
+	}
+
+	to {
+		rotate: 0;
+		top: 100%;
+	}
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+		width: 0;
+	}
+
+	to {
+		opacity: 1;
+		width: 100%;
 	}
 }
