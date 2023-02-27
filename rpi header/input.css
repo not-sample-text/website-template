@@ -26,18 +26,28 @@ header .hamburger-menu {
 }
 
 header .line {
+	transition: 0.2 all ease-in-out;
 	scale: 1 2;
 	@apply w-full h-px bg-stone-500 rounded-full absolute;
 }
 
-header .line-top {
+header .line:first-child {
 	@apply top-0;
+	animation-duration: 300ms;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
 }
-header .line-middle {
+header .line:nth-child(2) {
 	@apply top-1/2;
+	animation-duration: 300ms;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
 }
-header .line-bottom {
+header .line:nth-child(3) {
 	@apply top-full;
+	animation-duration: 300ms;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
 }
 
 header .link-list {
@@ -78,7 +88,8 @@ header .nav-wrapper {
 }
 
 header .nav-wrapper a {
-	@apply border-b border-stone-300 p-3;
+	@apply border-b border-stone-300 py-3 px-[12.5vw];
+	@apply max-md:w-screen max-md:px-3;
 	@apply hover:bg-[#333] hover:text-[#f5f6f9];
 }
 
@@ -89,4 +100,25 @@ header .nav-wrapper a.for-home {
 
 header .nav-wrapper a.for-industry {
 	@apply font-bold;
+}
+
+@keyframes rotate-top {
+	to {
+		rotate: 45deg;
+		top: 50%;
+	}
+}
+
+@keyframes rotate-bottom {
+	to {
+		rotate: -45deg;
+		top: 50%;
+	}
+}
+
+@keyframes dissapear {
+	to {
+		opacity: 0;
+		width: 0;
+	}
 }

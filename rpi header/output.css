@@ -61,6 +61,7 @@ header .hamburger-menu {
 }
 
 header .line {
+  transition: 0.2 all ease-in-out;
   scale: 1 2;
   position: absolute;
   height: 1px;
@@ -70,16 +71,25 @@ header .line {
   background-color: rgb(120 113 108 / var(--tw-bg-opacity));
 }
 
-header .line-top {
+header .line:first-child {
   top: 0px;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
-header .line-middle {
+header .line:nth-child(2) {
   top: 50%;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
-header .line-bottom {
+header .line:nth-child(3) {
   top: 100%;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 header .link-list {
@@ -156,7 +166,18 @@ header .nav-wrapper a {
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(214 211 209 / var(--tw-border-opacity));
-  padding: 0.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 12.5vw;
+  padding-right: 12.5vw;
+}
+
+@media not all and (min-width: 768px) {
+  header .nav-wrapper a {
+    width: 100vw;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
 }
 
 header .nav-wrapper a:hover {
@@ -181,4 +202,25 @@ header .nav-wrapper a.for-home:hover {
 
 header .nav-wrapper a.for-industry {
   font-weight: 700;
+}
+
+@keyframes rotate-top {
+  to {
+    rotate: 45deg;
+    top: 50%;
+  }
+}
+
+@keyframes rotate-bottom {
+  to {
+    rotate: -45deg;
+    top: 50%;
+  }
+}
+
+@keyframes dissapear {
+  to {
+    opacity: 0;
+    width: 0;
+  }
 }
