@@ -21,55 +21,67 @@ header .site-title span {
 }
 
 header .hamburger-menu {
-	@apply hidden flex-col gap-y-3 w-8 text-4xl relative h-7;
-	@apply max-xl:flex;
+	@apply hidden h-4 w-8 relative;
+	@apply max-xl:inline-block;
 }
 
 header .line {
-	transition: 0.2 all ease-in-out;
 	scale: 1 2;
-	@apply w-full h-px bg-stone-500 rounded-full absolute;
+	@apply h-px bg-[#53ce63] w-full transition-all duration-500 ease-in-out rounded-full absolute;
 }
 
-header .line:first-child {
+header .line:nth-child(1) {
 	@apply top-0;
-	animation-duration: 0.5s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-in-out;
 }
 header .line:nth-child(2) {
 	@apply top-1/2;
-	animation-duration: 0.5s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-in-out;
 }
 header .line:nth-child(3) {
 	@apply top-full;
-	animation-duration: 0.5s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-in-out;
+}
+header .hamburger-menu.active .line:nth-child(1) {
+	rotate: 45deg;
+	@apply top-1/2;
+}
+
+.hamburger-menu.active .line:nth-child(2) {
+	@apply opacity-0 w-0;
+}
+
+header .hamburger-menu.active .line:nth-child(3) {
+	rotate: -45deg;
+	@apply top-1/2;
 }
 
 header .link-list {
 	@apply bg-[#f5f6f9] capitalize;
-	@apply max-xl:hidden;
 }
 
 header .link-list .wrapper {
 	@apply p-0;
+	@apply max-xl:hidden;
 }
 
-header .link-list > div {
+header .link-list .wrapper > div {
 	@apply flex flex-row items-center;
+	@apply max-xl:flex-col max-xl:w-full;
 }
 
 header .link-list a {
 	@apply inline-block p-3 capitalize;
-	@apply hover:bg-[#333] hover:text-[#f5f6f9];
+	@apply max-xl:w-full;
 }
+
+header .link-list a:hover {
+	@apply bg-[#333] text-[#f5f6f9];
+}
+
 header .link-list a.for-home {
 	@apply text-[#53ce63] font-bold;
-	@apply hover:text-[#f5f6f9] hover:bg-[#53ce63];
+}
+
+header .link-list a.for-home:hover {
+	@apply text-[#f5f6f9] bg-[#53ce63];
 }
 
 header .link-list a.for-industry {
@@ -77,84 +89,4 @@ header .link-list a.for-industry {
 }
 header div.border-bottom {
 	@apply border-b border-stone-300;
-}
-
-header nav {
-	@apply hidden;
-}
-
-header .nav-wrapper {
-	@apply text-2xl capitalize flex flex-col;
-}
-
-header .nav-wrapper a {
-	@apply border-b border-stone-300 py-3 px-[12.5vw];
-	@apply max-md:w-screen max-md:px-3;
-	@apply hover:bg-[#333] hover:text-[#f5f6f9];
-}
-
-header .nav-wrapper a.for-home {
-	@apply text-[#53ce63] font-bold;
-	@apply hover:text-[#f5f6f9] hover:bg-[#53ce63];
-}
-
-header .nav-wrapper a.for-industry {
-	@apply font-bold;
-}
-
-@keyframes rotate-top {
-	to {
-		rotate: 45deg;
-		top: 50%;
-	}
-}
-
-@keyframes rotate-bottom {
-	to {
-		rotate: -45deg;
-		top: 50%;
-	}
-}
-
-@keyframes dissappear {
-	to {
-		opacity: 0;
-		width: 0;
-	}
-}
-
-@keyframes unrotate-top {
-	from {
-		rotate: 45deg;
-		top: 50%;
-	}
-
-	to {
-		rotate: 0;
-		top: 0;
-	}
-}
-
-@keyframes unrotate-bottom {
-	from {
-		rotate: 45deg;
-		top: 50%;
-	}
-
-	to {
-		rotate: 0;
-		top: 100%;
-	}
-}
-
-@keyframes appear {
-	from {
-		opacity: 0;
-		width: 0;
-	}
-
-	to {
-		opacity: 1;
-		width: 100%;
-	}
 }

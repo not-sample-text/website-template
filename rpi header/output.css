@@ -46,50 +46,54 @@ header .site-title span {
 header .hamburger-menu {
   position: relative;
   display: none;
-  height: 1.75rem;
+  height: 1rem;
   width: 2rem;
-  flex-direction: column;
-  row-gap: 0.75rem;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 @media not all and (min-width: 1280px) {
   header .hamburger-menu {
-    display: flex;
+    display: inline-block;
   }
 }
 
 header .line {
-  transition: 0.2 all ease-in-out;
   scale: 1 2;
   position: absolute;
   height: 1px;
   width: 100%;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
-  background-color: rgb(120 113 108 / var(--tw-bg-opacity));
+  background-color: rgb(83 206 99 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-header .line:first-child {
+header .line:nth-child(1) {
   top: 0px;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
 }
 
 header .line:nth-child(2) {
   top: 50%;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
 }
 
 header .line:nth-child(3) {
   top: 100%;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+}
+
+header .hamburger-menu.active .line:nth-child(1) {
+  rotate: 45deg;
+  top: 50%;
+}
+
+.hamburger-menu.active .line:nth-child(2) {
+  width: 0px;
+  opacity: 0;
+}
+
+header .hamburger-menu.active .line:nth-child(3) {
+  rotate: -45deg;
+  top: 50%;
 }
 
 header .link-list {
@@ -98,26 +102,39 @@ header .link-list {
   text-transform: capitalize;
 }
 
-@media not all and (min-width: 1280px) {
-  header .link-list {
-    display: none;
-  }
-}
-
 header .link-list .wrapper {
   padding: 0px;
 }
 
-header .link-list > div {
+@media not all and (min-width: 1280px) {
+  header .link-list .wrapper {
+    display: none;
+  }
+}
+
+header .link-list .wrapper > div {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+@media not all and (min-width: 1280px) {
+  header .link-list .wrapper > div {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 
 header .link-list a {
   display: inline-block;
   padding: 0.75rem;
   text-transform: capitalize;
+}
+
+@media not all and (min-width: 1280px) {
+  header .link-list a {
+    width: 100%;
+  }
 }
 
 header .link-list a:hover {
@@ -148,115 +165,4 @@ header div.border-bottom {
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(214 211 209 / var(--tw-border-opacity));
-}
-
-header nav {
-  display: none;
-}
-
-header .nav-wrapper {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  text-transform: capitalize;
-}
-
-header .nav-wrapper a {
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(214 211 209 / var(--tw-border-opacity));
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 12.5vw;
-  padding-right: 12.5vw;
-}
-
-@media not all and (min-width: 768px) {
-  header .nav-wrapper a {
-    width: 100vw;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-}
-
-header .nav-wrapper a:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(245 246 249 / var(--tw-text-opacity));
-}
-
-header .nav-wrapper a.for-home {
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgb(83 206 99 / var(--tw-text-opacity));
-}
-
-header .nav-wrapper a.for-home:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(83 206 99 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(245 246 249 / var(--tw-text-opacity));
-}
-
-header .nav-wrapper a.for-industry {
-  font-weight: 700;
-}
-
-@keyframes rotate-top {
-  to {
-    rotate: 45deg;
-    top: 50%;
-  }
-}
-
-@keyframes rotate-bottom {
-  to {
-    rotate: -45deg;
-    top: 50%;
-  }
-}
-
-@keyframes dissappear {
-  to {
-    opacity: 0;
-    width: 0;
-  }
-}
-
-@keyframes unrotate-top {
-  from {
-    rotate: 45deg;
-    top: 50%;
-  }
-
-  to {
-    rotate: 0;
-    top: 0;
-  }
-}
-
-@keyframes unrotate-bottom {
-  from {
-    rotate: 45deg;
-    top: 50%;
-  }
-
-  to {
-    rotate: 0;
-    top: 100%;
-  }
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    width: 0;
-  }
-
-  to {
-    opacity: 1;
-    width: 100%;
-  }
 }
