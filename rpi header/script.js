@@ -1,8 +1,4 @@
-const menu = $(".hamburger-menu"),
-	dropdown = $(".link-list .wrapper");
-
-menu.on("click", function () {
-	menu.toggleClass("active");
-
-	dropdown.toggleClass("-top-full top-auto");
+$(".hamburger-menu").on("click", function () {
+	$(".hamburger-menu").toggleClass("active");
+	$(".link-list").toggleClass("active");
 });

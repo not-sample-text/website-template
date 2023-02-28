@@ -16,8 +16,11 @@ header .wrapper {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  box-shadow: 500px 0px 0px 0px white, -500px 0px 0px 0px white;
 }
 
 header .site-title {
@@ -38,8 +41,8 @@ header .site-title span {
 header .hamburger-menu {
   position: relative;
   display: none;
-  height: 1rem;
   width: 2rem;
+  padding: 1rem;
 }
 
 header .line {
@@ -57,14 +60,17 @@ header .line {
 
 header .line:nth-child(1) {
   top: 0px;
+  left: 0px;
 }
 
 header .line:nth-child(2) {
   top: 50%;
+  left: 0px;
 }
 
 header .line:nth-child(3) {
   top: 100%;
+  left: 0px;
 }
 
 header .hamburger-menu.active .line:nth-child(1) {
@@ -72,7 +78,7 @@ header .hamburger-menu.active .line:nth-child(1) {
   top: 50%;
 }
 
-.hamburger-menu.active .line:nth-child(2) {
+header .hamburger-menu.active .line:nth-child(2) {
   width: 0px;
   opacity: 0;
 }
@@ -83,15 +89,25 @@ header .hamburger-menu.active .line:nth-child(3) {
 }
 
 header .link-list {
+  position: relative;
+  z-index: -10;
   --tw-bg-opacity: 1;
   background-color: rgb(245 246 249 / var(--tw-bg-opacity));
   text-transform: capitalize;
 }
 
 header .link-list .wrapper {
-  position: absolute;
-  top: -100%;
+  box-shadow: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 246 249 / var(--tw-bg-opacity));
   padding: 0px;
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header .link-list.active .wrapper {
+  margin-top: 0px;
 }
 
 header .link-list .wrapper > div {
@@ -148,6 +164,11 @@ header div.border-bottom {
 
   header .link-list a {
     width: 100%;
+  }
+
+  header .link-list .wrapper {
+    margin-top: -390px;
+    flex-direction: column;
   }
 }
 

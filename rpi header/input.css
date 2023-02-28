@@ -8,7 +8,8 @@ header {
 }
 
 header .wrapper {
-	@apply flex flex-row items-center justify-between py-3 w-[75vw] mx-auto;
+	@apply flex flex-row items-center justify-between py-3 w-[75vw] mx-auto bg-white;
+	box-shadow: 500px 0px 0px 0px white, -500px 0px 0px 0px white;
 }
 
 header .site-title {
@@ -20,7 +21,7 @@ header .site-title span {
 }
 
 header .hamburger-menu {
-	@apply hidden h-4 w-8 relative;
+	@apply hidden w-8 relative p-4;
 }
 
 header .line {
@@ -29,20 +30,20 @@ header .line {
 }
 
 header .line:nth-child(1) {
-	@apply top-0;
+	@apply top-0 left-0;
 }
 header .line:nth-child(2) {
-	@apply top-1/2;
+	@apply top-1/2 left-0;
 }
 header .line:nth-child(3) {
-	@apply top-full;
+	@apply top-full left-0;
 }
 header .hamburger-menu.active .line:nth-child(1) {
 	rotate: 45deg;
 	@apply top-1/2;
 }
 
-.hamburger-menu.active .line:nth-child(2) {
+header .hamburger-menu.active .line:nth-child(2) {
 	@apply opacity-0 w-0;
 }
 
@@ -52,11 +53,16 @@ header .hamburger-menu.active .line:nth-child(3) {
 }
 
 header .link-list {
-	@apply bg-[#f5f6f9] capitalize;
+	@apply bg-[#f5f6f9] relative -z-10 capitalize;
 }
 
 header .link-list .wrapper {
-	@apply p-0 absolute -top-full;
+	box-shadow: none;
+	@apply p-0 transition-all duration-500 ease-in-out bg-[#f5f6f9];
+}
+
+header .link-list.active .wrapper {
+	@apply mt-0;
 }
 
 header .link-list .wrapper > div {
@@ -97,6 +103,10 @@ header div.border-bottom {
 
 	header .link-list a {
 		@apply w-full;
+	}
+
+	header .link-list .wrapper {
+		@apply -mt-[390px] flex-col;
 	}
 }
 
