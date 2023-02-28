@@ -20,7 +20,12 @@ header .wrapper {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  box-shadow: 500px 0px 0px 0px white, -500px 0px 0px 0px white;
+}
+
+header > .wrapper {
+  position: relative;
+  z-index: 10;
+  box-shadow: 9999px 0px 0px 0px white, -9999px 0px 0px 0px white;
 }
 
 header .site-title {
@@ -39,16 +44,18 @@ header .site-title span {
 }
 
 header .hamburger-menu {
-  position: relative;
   display: none;
+  height: 2rem;
   width: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 1rem;
 }
 
 header .line {
-  scale: 1 2;
-  position: absolute;
-  height: 1px;
+  /* scale: 1 2; */
+  display: block;
+  height: 2px;
   width: 100%;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
@@ -56,21 +63,6 @@ header .line {
   transition-property: all;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-header .line:nth-child(1) {
-  top: 0px;
-  left: 0px;
-}
-
-header .line:nth-child(2) {
-  top: 50%;
-  left: 0px;
-}
-
-header .line:nth-child(3) {
-  top: 100%;
-  left: 0px;
 }
 
 header .hamburger-menu.active .line:nth-child(1) {
@@ -89,15 +81,12 @@ header .hamburger-menu.active .line:nth-child(3) {
 }
 
 header .link-list {
-  position: relative;
-  z-index: -10;
   --tw-bg-opacity: 1;
   background-color: rgb(245 246 249 / var(--tw-bg-opacity));
   text-transform: capitalize;
 }
 
 header .link-list .wrapper {
-  box-shadow: none;
   --tw-bg-opacity: 1;
   background-color: rgb(245 246 249 / var(--tw-bg-opacity));
   padding: 0px;
@@ -154,7 +143,7 @@ header div.border-bottom {
 
 @media not all and (min-width: 1280px) {
   header .hamburger-menu {
-    display: inline-block;
+    display: flex;
   }
 
   header .link-list .wrapper > div {
