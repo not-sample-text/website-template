@@ -3,11 +3,6 @@ const menu = $(".hamburger-menu"),
 
 menu.on("click", function () {
 	menu.toggleClass("active");
-	dropdown.toggleClass("flex-col");
 
-	if (menu.hasClass("active")) {
-		dropdown.stop().slideDown("slow");
-	} else {
-		dropdown.stop().slideUp("slow");
-	}
+	dropdown.toggleClass("-top-full top-auto");
 });

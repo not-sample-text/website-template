@@ -9,7 +9,6 @@ header {
 
 header .wrapper {
 	@apply flex flex-row items-center justify-between py-3 w-[75vw] mx-auto;
-	@apply max-md:w-screen max-md:px-3;
 }
 
 header .site-title {
@@ -22,7 +21,6 @@ header .site-title span {
 
 header .hamburger-menu {
 	@apply hidden h-4 w-8 relative;
-	@apply max-xl:inline-block;
 }
 
 header .line {
@@ -58,18 +56,15 @@ header .link-list {
 }
 
 header .link-list .wrapper {
-	@apply p-0;
-	@apply max-xl:hidden;
+	@apply p-0 absolute -top-full;
 }
 
 header .link-list .wrapper > div {
 	@apply flex flex-row items-center;
-	@apply max-xl:flex-col max-xl:w-full;
 }
 
 header .link-list a {
 	@apply inline-block p-3 capitalize;
-	@apply max-xl:w-full;
 }
 
 header .link-list a:hover {
@@ -89,4 +84,24 @@ header .link-list a.for-industry {
 }
 header div.border-bottom {
 	@apply border-b border-stone-300;
+}
+
+@media not all and (min-width: 1280px) {
+	header .hamburger-menu {
+		@apply inline-block;
+	}
+
+	header .link-list .wrapper > div {
+		@apply flex-col w-full;
+	}
+
+	header .link-list a {
+		@apply w-full;
+	}
+}
+
+@media not all and (min-width: 768px) {
+	header .wrapper {
+		@apply w-screen px-3;
+	}
 }
