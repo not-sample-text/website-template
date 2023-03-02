@@ -108,7 +108,7 @@ header div.border-bottom {
 	}
 
 	header .link-list a {
-		@apply w-full -mt-[390px];
+		@apply w-full -mt-auto;
 	}
 }
 

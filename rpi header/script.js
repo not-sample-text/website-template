@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-	const menu = document.getElementsByClassName("hamburger-menu")[0],
-		list = document.getElementsByClassName("link-list")[0];
+	const menu = document.getElementById("hamburger-menu"),
+		list = document.getElementById("link-list");
 
 	menu.onclick = function () {
 		menu.classList.toggle("active");
