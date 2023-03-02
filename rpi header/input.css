@@ -24,13 +24,12 @@ header .site-title span {
 }
 
 header .hamburger-menu {
-	@apply hidden h-8 w-8 flex-col justify-between relative;
+	@apply hidden w-8 h-8 relative;
 }
 
 header .line {
-	scale: 1 2;
-	rotate: 0;
-	@apply h-px w-full bg-[#53ce63] transition-all duration-500 ease-in-out absolute;
+	rotate: 0deg;
+	@apply h-[2px] w-full bg-[#53ce63] transition-all duration-500 ease-in-out absolute;
 }
 
 header .hamburger-menu .line:nth-child(1) {
@@ -97,7 +96,7 @@ header div.border-bottom {
 
 @media not all and (min-width: 1280px) {
 	header .hamburger-menu {
-		@apply flex;
+		@apply inline-block;
 	}
 
 	header .link-list {

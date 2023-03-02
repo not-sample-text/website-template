@@ -47,15 +47,12 @@ header .hamburger-menu {
   display: none;
   height: 2rem;
   width: 2rem;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 header .line {
-  scale: 1 2;
-  rotate: 0;
+  rotate: 0deg;
   position: absolute;
-  height: 1px;
+  height: 2px;
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(83 206 99 / var(--tw-bg-opacity));
@@ -163,7 +160,7 @@ header div.border-bottom {
 
 @media not all and (min-width: 1280px) {
   header .hamburger-menu {
-    display: flex;
+    display: inline-block;
   }
 
   header .link-list {
