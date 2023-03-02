@@ -59,6 +59,7 @@ header .hamburger-menu.active .line:nth-child(3) {
 header .link-list {
 	@apply bg-[#f5f6f9] capitalize flex flex-row justify-between px-[12.5vw];
 }
+
 header .link-list.active {
 	@apply bg-[#f5f6f9] capitalize flex;
 }
@@ -108,7 +109,7 @@ header div.border-bottom {
 	}
 
 	header .link-list a {
-		@apply w-full mt-auto;
+		@apply w-full -mt-32;
 	}
 }
 

@@ -176,7 +176,7 @@ header div.border-bottom {
   }
 
   header .link-list a {
-    margin-top: auto;
+    margin-top: -8rem;
     width: 100%;
   }
 }
