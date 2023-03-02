@@ -5,14 +5,11 @@
 header {
 	font-family: "Roboto";
 	@apply text-[#333];
+	@apply border-b border-stone-300;
 }
 
 header .wrapper {
 	@apply flex flex-row items-center justify-between py-3 px-[12.5vw] w-full bg-white;
-}
-
-header > .wrapper {
-	@apply relative z-10;
 }
 
 header .site-title {
@@ -39,7 +36,7 @@ header .hamburger-menu .line:nth-child(2) {
 	@apply top-1/2;
 }
 header .hamburger-menu .line:nth-child(3) {
-	@apply top-full;
+	@apply top-[calc(100%_-_2px)];
 }
 header .hamburger-menu.active .line:nth-child(1) {
 	rotate: 45deg;
@@ -60,7 +57,7 @@ header .link-list {
 }
 
 header .link-list.active {
-	@apply bg-[#f5f6f9] capitalize flex;
+	@apply flex;
 }
 
 header .link-list > div {
@@ -68,11 +65,7 @@ header .link-list > div {
 }
 
 header .link-list a {
-	@apply inline-block p-3 capitalize transition-[margin-top] duration-500 ease-in-out bg-[#f5f6f9];
-}
-
-header .link-list.active a {
-	@apply mt-0;
+	@apply inline-block p-3 bg-[#f5f6f9];
 }
 
 header .link-list a:hover {
@@ -90,9 +83,6 @@ header .link-list a.for-home:hover {
 header .link-list a.for-industry {
 	@apply font-bold;
 }
-header div.border-bottom {
-	@apply border-b border-stone-300;
-}
 
 @media not all and (min-width: 1280px) {
 	header .hamburger-menu {
@@ -100,7 +90,7 @@ header div.border-bottom {
 	}
 
 	header .link-list {
-		@apply flex-col;
+		@apply flex-col hidden;
 	}
 
 	header .link-list > div {
@@ -108,7 +98,7 @@ header div.border-bottom {
 	}
 
 	header .link-list a {
-		@apply w-full -mt-32;
+		@apply w-full;
 	}
 }
 
