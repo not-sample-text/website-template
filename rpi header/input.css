@@ -108,19 +108,19 @@ header div.border-bottom {
 	}
 
 	header .link-list a {
-		@apply w-full -mt-auto;
+		@apply w-full mt-auto;
 	}
 }
 
 @media not all and (min-width: 768px) {
 	header .link-list {
-		@apply px-3;
+		@apply px-0;
 	}
 	header .wrapper {
 		@apply w-screen px-3;
 	}
 
 	header .link-list a {
-		@apply px-3;
+		@apply px-6;
 	}
 }

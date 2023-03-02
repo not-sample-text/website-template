@@ -176,15 +176,15 @@ header div.border-bottom {
   }
 
   header .link-list a {
-    margin-top: -390px;
+    margin-top: auto;
     width: 100%;
   }
 }
 
 @media not all and (min-width: 768px) {
   header .link-list {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   header .wrapper {
@@ -194,7 +194,7 @@ header div.border-bottom {
   }
 
   header .link-list a {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
