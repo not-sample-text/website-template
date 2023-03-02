@@ -24,46 +24,55 @@ header .site-title span {
 }
 
 header .hamburger-menu {
-	@apply hidden h-8 w-8 flex-col justify-between;
+	@apply hidden h-8 w-8 flex-col justify-between relative;
 }
 
 header .line {
 	scale: 1 2;
-	@apply h-px w-full bg-[#53ce63] transition-all duration-500 ease-in-out;
+	rotate: 0;
+	@apply h-px w-full bg-[#53ce63] transition-all duration-500 ease-in-out absolute;
 }
 
+header .hamburger-menu .line:nth-child(1) {
+	@apply top-0;
+}
+header .hamburger-menu .line:nth-child(2) {
+	@apply top-1/2;
+}
+header .hamburger-menu .line:nth-child(3) {
+	@apply top-full;
+}
 header .hamburger-menu.active .line:nth-child(1) {
 	rotate: 45deg;
-	transform: translateX(1rem);
+	@apply top-1/2;
 }
 
 header .hamburger-menu.active .line:nth-child(2) {
-	@apply opacity-0 w-0;
+	@apply opacity-0 w-0  top-1/2;
 }
 
 header .hamburger-menu.active .line:nth-child(3) {
 	rotate: -45deg;
-	transform: translateX(-1rem);
+	@apply top-1/2;
 }
 
 header .link-list {
-	@apply bg-[#f5f6f9] capitalize;
+	@apply bg-[#f5f6f9] capitalize flex flex-row justify-between px-[12.5vw];
+}
+header .link-list.active {
+	@apply bg-[#f5f6f9] capitalize flex;
 }
 
-header .link-list .wrapper {
-	@apply p-0 transition-all duration-500 ease-in-out bg-[#f5f6f9];
-}
-
-header .link-list.active .wrapper {
-	@apply mt-0;
-}
-
-header .link-list .wrapper > div {
+header .link-list > div {
 	@apply flex flex-row items-center;
 }
 
 header .link-list a {
-	@apply inline-block p-3 capitalize;
+	@apply inline-block p-3 capitalize transition-[margin-top] duration-500 ease-in-out bg-[#f5f6f9];
+}
+
+header .link-list.active a {
+	@apply mt-0;
 }
 
 header .link-list a:hover {
@@ -90,21 +99,28 @@ header div.border-bottom {
 		@apply flex;
 	}
 
-	header .link-list .wrapper > div {
+	header .link-list {
+		@apply flex-col;
+	}
+
+	header .link-list > div {
 		@apply flex-col w-full;
 	}
 
 	header .link-list a {
-		@apply w-full;
-	}
-
-	header .link-list .wrapper {
-		@apply -mt-[390px] flex-col;
+		@apply w-full -mt-[390px];
 	}
 }
 
 @media not all and (min-width: 768px) {
+	header .link-list {
+		@apply px-3;
+	}
 	header .wrapper {
 		@apply w-screen px-3;
+	}
+
+	header .link-list a {
+		@apply px-3;
 	}
 }
