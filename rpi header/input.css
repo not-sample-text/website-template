@@ -8,7 +8,7 @@ header {
 }
 
 header .wrapper {
-	@apply flex flex-row items-center justify-between px-[12.5vw] w-full bg-white;
+	@apply flex flex-row items-center justify-between py-3 px-[12.5vw] w-full bg-white;
 }
 
 header > .wrapper {
@@ -25,10 +25,6 @@ header .site-title span {
 
 header .hamburger-menu {
 	@apply hidden w-8 h-8 relative;
-}
-
-header .burger-patty {
-	@apply p-3;
 }
 
 header .line {
