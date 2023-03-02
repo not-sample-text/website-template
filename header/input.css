@@ -4,12 +4,11 @@
 
 header {
 	font-family: "Roboto";
-	@apply text-[#333];
-	@apply border-b border-stone-300;
+	@apply border-b border-stone-300 text-[#333] bg-white;
 }
 
-header .wrapper {
-	@apply flex flex-row items-center justify-between py-3 px-[12.5vw] w-full bg-white;
+header .container {
+	@apply flex flex-row items-center py-3 px-[7.5vw] justify-between w-full;
 }
 
 header .site-title {
@@ -53,7 +52,7 @@ header .hamburger-menu.active .line:nth-child(3) {
 }
 
 header .link-list {
-	@apply bg-[#f5f6f9] capitalize flex flex-row justify-between px-[12.5vw];
+	@apply bg-[#f5f6f9] capitalize flex flex-row justify-between px-[7.5vw];
 }
 
 header .link-list.active {
@@ -102,11 +101,19 @@ header .link-list a.for-industry {
 	}
 }
 
+@media not all and (min-width: 1024px) {
+	header .link-list,
+	header .container {
+		@apply w-screen px-[5vw];
+	}
+}
+
 @media not all and (min-width: 768px) {
 	header .link-list {
 		@apply px-0;
 	}
-	header .wrapper {
+
+	header .container {
 		@apply w-screen px-3;
 	}
 

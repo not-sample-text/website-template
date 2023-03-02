@@ -4,25 +4,25 @@
 
 header {
   font-family: "Roboto";
-  --tw-text-opacity: 1;
-  color: rgb(51 51 51 / var(--tw-text-opacity));
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(214 211 209 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
 }
 
-header .wrapper {
+header .container {
   display: flex;
   width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  padding-left: 12.5vw;
-  padding-right: 12.5vw;
+  padding-left: 7.5vw;
+  padding-right: 7.5vw;
 }
 
 header .site-title {
@@ -93,8 +93,8 @@ header .link-list {
   justify-content: space-between;
   --tw-bg-opacity: 1;
   background-color: rgb(245 246 249 / var(--tw-bg-opacity));
-  padding-left: 12.5vw;
-  padding-right: 12.5vw;
+  padding-left: 7.5vw;
+  padding-right: 7.5vw;
   text-transform: capitalize;
 }
 
@@ -159,13 +159,22 @@ header .link-list a.for-industry {
   }
 }
 
+@media not all and (min-width: 1024px) {
+  header .link-list,
+	header .container {
+    width: 100vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+
 @media not all and (min-width: 768px) {
   header .link-list {
     padding-left: 0px;
     padding-right: 0px;
   }
 
-  header .wrapper {
+  header .container {
     width: 100vw;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
