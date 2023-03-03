@@ -22,6 +22,6 @@
 	@apply max-lg:max-w-none;
 }
 
-.hero-banner img {
-	@apply object-cover object-center;
+.hero-banner picture {
+	@apply w-1/2;
 }
