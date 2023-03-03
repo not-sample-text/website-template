@@ -1,7 +1,3 @@
-/**TODO
-* 
-*/
-
 header {
 	font-family: "Roboto";
 	@apply border-b border-stone-300 text-[#333] bg-white;
