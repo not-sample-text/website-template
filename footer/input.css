@@ -9,7 +9,6 @@ footer a {
 
 footer .wrapper {
 	@apply flex flex-wrap py-8 gap-y-4 w-[75vw] mx-auto;
-	@apply max-sm:w-screen max-sm:px-10;
 }
 
 footer .header {
@@ -18,8 +17,6 @@ footer .header {
 
 footer .col {
 	@apply flex flex-col w-1/4;
-	@apply max-lg:w-1/2;
-	@apply max-sm:w-full max-sm:justify-start;
 }
 footer .col > div {
 	@apply flex flex-col mb-4;
@@ -35,4 +32,20 @@ footer .socials > div {
 
 footer span.ti {
 	@apply text-2xl;
+}
+
+@media (max-width: 1024px) {
+	footer .col {
+		@apply w-1/2;
+	}
+}
+
+@media (max-width: 640px) {
+	footer .wrapper {
+		@apply w-screen px-10;
+	}
+
+	footer.col {
+		@apply w-full justify-start;
+	}
 }

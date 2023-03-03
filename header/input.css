@@ -79,7 +79,7 @@ header .link-list a.for-industry {
 	@apply font-bold;
 }
 
-@media not all and (min-width: 1280px) {
+@media (max-width: 1280px) {
 	header .hamburger-menu {
 		@apply inline-block;
 	}
@@ -97,14 +97,14 @@ header .link-list a.for-industry {
 	}
 }
 
-@media not all and (min-width: 1024px) {
+@media (max-width: 1024px) {
 	header .link-list,
 	header .container {
 		@apply w-screen px-[5vw];
 	}
 }
 
-@media not all and (min-width: 768px) {
+@media (max-width: 768px) {
 	header .link-list {
 		@apply px-0;
 	}

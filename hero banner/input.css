@@ -1,12 +1,10 @@
 .hero-banner {
 	font-family: "Roboto";
 	@apply bg-[#e5e5e5] text-[#333] flex flex-row-reverse justify-between;
-	@apply max-lg:flex-col max-xl:pt-5 max-lg:max-h-none;
 }
 
 .hero-banner > div {
 	@apply flex flex-col justify-center items-end text-right gap-y-5 p-10;
-	@apply max-lg:justify-center max-lg:items-center max-lg:text-center max-md:pb-0;
 }
 
 .hero-banner .sect-title {
@@ -19,10 +17,34 @@
 
 .hero-banner .desc {
 	@apply text-lg max-w-lg;
-	@apply max-lg:max-w-none;
 }
 
 .hero-banner picture {
 	@apply w-1/2;
-	@apply max-md:w-full;
+}
+
+@media (max-width: 1280px) {
+	.hero-banner {
+		@apply pt-5;
+	}
+}
+
+@media (max-width: 1024px) {
+	.hero-banner {
+		@apply flex-col;
+	}
+
+	.hero-banner > div {
+		@apply justify-center items-center text-center;
+	}
+
+	.hero-banner picture {
+		@apply w-auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero-banner > div {
+		@apply pb-0;
+	}
 }

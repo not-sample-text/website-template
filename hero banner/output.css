@@ -9,19 +9,6 @@
   color: rgb(51 51 51 / var(--tw-text-opacity));
 }
 
-@media not all and (min-width: 1280px) {
-  .hero-banner {
-    padding-top: 1.25rem;
-  }
-}
-
-@media not all and (min-width: 1024px) {
-  .hero-banner {
-    max-height: none;
-    flex-direction: column;
-  }
-}
-
 .hero-banner > div {
   display: flex;
   flex-direction: column;
@@ -30,20 +17,6 @@
   row-gap: 1.25rem;
   padding: 2.5rem;
   text-align: right;
-}
-
-@media not all and (min-width: 1024px) {
-  .hero-banner > div {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-}
-
-@media not all and (min-width: 768px) {
-  .hero-banner > div {
-    padding-bottom: 0px;
-  }
 }
 
 .hero-banner .sect-title {
@@ -74,18 +47,34 @@
   line-height: 1.75rem;
 }
 
-@media not all and (min-width: 1024px) {
-  .hero-banner .desc {
-    max-width: none;
-  }
-}
-
 .hero-banner picture {
   width: 50%;
 }
 
-@media not all and (min-width: 768px) {
+@media (max-width: 1280px) {
+  .hero-banner {
+    padding-top: 1.25rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-banner {
+    flex-direction: column;
+  }
+
+  .hero-banner > div {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
   .hero-banner picture {
-    width: 100%;
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner > div {
+    padding-bottom: 0px;
   }
 }
