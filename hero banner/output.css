@@ -17,6 +17,7 @@
 
 @media not all and (min-width: 1024px) {
   .hero-banner {
+    max-height: none;
     flex-direction: column;
   }
 }
@@ -50,7 +51,10 @@
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(30 64 175 / var(--tw-bg-opacity));
-  padding: 0.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
@@ -71,7 +75,8 @@
 }
 
 .hero-banner img {
-  min-width: 25vw;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
