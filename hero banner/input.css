@@ -6,7 +6,7 @@
 
 .hero-banner > div {
 	@apply flex flex-col justify-center items-end text-right gap-y-5 p-10;
-	@apply max-lg:justify-center max-lg:items-center max-lg:text-center;
+	@apply max-lg:justify-center max-lg:items-center max-lg:text-center max-md:pb-0;
 }
 
 .hero-banner .sect-title {
