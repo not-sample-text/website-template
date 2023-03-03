@@ -24,4 +24,5 @@
 
 .hero-banner picture {
 	@apply w-1/2;
+	@apply max-md:w-full;
 }
