@@ -47,8 +47,9 @@
   line-height: 1.75rem;
 }
 
-.hero-banner picture {
-  width: 50%;
+.hero-banner picture,
+.hero-banner picture img {
+  max-height: 480px;
 }
 
 @media (max-width: 1280px) {
@@ -66,10 +67,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
-
-  .hero-banner picture {
-    width: auto;
   }
 }
 
