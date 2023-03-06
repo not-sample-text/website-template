@@ -7,16 +7,8 @@
 	@apply flex flex-col justify-center items-end text-right gap-y-5 p-10;
 }
 
-.hero-banner .sect-title {
-	@apply text-4xl;
-}
-
 .hero-banner a {
 	@apply bg-blue-800 py-3 px-6 w-max rounded-full font-bold text-lg text-white;
-}
-
-.hero-banner .desc {
-	@apply text-lg max-w-lg;
 }
 
 .hero-banner picture,

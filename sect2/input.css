@@ -8,10 +8,6 @@
 	@apply mx-auto;
 }
 
-.sect2 .sect-title {
-	@apply text-3xl;
-}
-
 .sect2 .desc {
 	@apply max-w-xl text-lg;
 }
