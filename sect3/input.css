@@ -1,0 +1,25 @@
+.sect3 {
+	font-family: "Roboto";
+	@apply text-center text-lg flex flex-col justify-center items-center gap-5 p-10;
+}
+
+.sect3 .sect-title {
+	@apply text-3xl mb-5;
+}
+.sect3 > div {
+	@apply flex flex-col mx-auto justify-center items-center;
+}
+
+.sect3 .icons {
+	@apply gap-5;
+}
+
+.sect3 .icons-row {
+	@apply flex justify-center items-center gap-5 flex-wrap;
+	@apply max-sm:gap-x-0;
+}
+
+.sect3 .icons-row > div {
+	@apply flex flex-col justify-center items-center;
+	@apply max-sm:w-1/2;
+}
