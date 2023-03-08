@@ -20,3 +20,8 @@
 	@apply flex flex-col justify-center items-center;
 	@apply max-sm:w-1/2;
 }
+
+.sect3 .icons img {
+	@apply w-[15vw];
+	@apply max-sm:w-[30vw];
+}
