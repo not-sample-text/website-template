@@ -19,6 +19,10 @@
 	@apply flex flex-col justify-center items-center;
 }
 
+.sect3 .icons img {
+	@apply w-[15vw];
+}
+
 @media (max-width: 640px) {
 	.sect3 .icons-row {
 		@apply gap-x-0;
@@ -27,9 +31,8 @@
 	.sect3 .icons-row > div {
 		@apply w-1/2;
 	}
-}
 
-.sect3 .icons img {
-	@apply w-[15vw];
-	@apply max-sm:w-[30vw];
+	.sect3 .icons img {
+		@apply w-[30vw];
+	}
 }
