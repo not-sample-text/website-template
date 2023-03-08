@@ -18,6 +18,7 @@ footer .header {
 footer .col {
 	@apply flex flex-col w-1/4;
 }
+
 footer .col > div {
 	@apply flex flex-col mb-4;
 }

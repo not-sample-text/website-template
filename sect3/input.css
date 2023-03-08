@@ -13,10 +13,18 @@
 
 .sect3 .icons-row {
 	@apply flex justify-center items-center gap-5 flex-wrap;
-	@apply max-sm:gap-x-0;
 }
 
 .sect3 .icons-row > div {
 	@apply flex flex-col justify-center items-center;
-	@apply max-sm:w-1/2;
+}
+
+@media (max-width: 640px) {
+	.sect3 .icons-row {
+		@apply gap-x-0;
+	}
+
+	.sect3 .icons-row > div {
+		@apply w-1/2;
+	}
 }
