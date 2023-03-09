@@ -8,3 +8,7 @@
 .desc {
 	@apply text-lg max-w-xl;
 }
+
+section a {
+	@apply bg-blue-800 p-3 rounded-full w-max inline-block text-white;
+}

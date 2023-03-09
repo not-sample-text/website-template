@@ -12,10 +12,6 @@
 	@apply max-w-xl text-lg;
 }
 
-.sect2 a {
-	@apply bg-blue-800 p-3 rounded-full w-max;
-}
-
 .sect2 picture,
 .sect2 picture img {
 	@apply mx-auto;
