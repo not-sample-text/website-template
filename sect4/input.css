@@ -18,4 +18,5 @@
 
 .sect4 .choild {
 	@apply flex flex-col justify-center gap-5 max-w-sm;
+	@apply max-md:max-w-none;
 }

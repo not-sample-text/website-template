@@ -51,3 +51,9 @@
   justify-content: center;
   gap: 1.25rem
 }
+
+@media not all and (min-width: 768px) {
+  .sect4 .choild {
+    max-width: none
+  }
+}
