@@ -4,19 +4,30 @@
 
 .sect4 > div {
 	@apply flex flex-row gap-5 justify-between items-center;
-	@apply max-md:flex-col-reverse;
 }
 .sect4 > div:nth-child(2) {
 	@apply flex-row-reverse;
-	@apply max-md:flex-col-reverse;
 }
 
 .sect4 img {
 	@apply w-[30vw] rounded-3xl object-cover object-center;
-	@apply max-md:w-full;
 }
 
 .sect4 .choild {
 	@apply flex flex-col justify-center gap-5 max-w-sm;
-	@apply max-md:max-w-none;
+}
+
+@media (max-width: 768px) {
+	.sect4 > div,
+	.sect4 > div:nth-child(2) {
+		@apply flex-col-reverse;
+	}
+
+	.sect4 img {
+		@apply w-full;
+	}
+
+	.sect4 .choild {
+		@apply max-w-none;
+	}
 }

@@ -13,20 +13,8 @@
   gap: 1.25rem
 }
 
-@media not all and (min-width: 768px) {
-  .sect4 > div {
-    flex-direction: column-reverse
-  }
-}
-
 .sect4 > div:nth-child(2) {
   flex-direction: row-reverse
-}
-
-@media not all and (min-width: 768px) {
-  .sect4 > div:nth-child(2) {
-    flex-direction: column-reverse
-  }
 }
 
 .sect4 img {
@@ -38,12 +26,6 @@
      object-position: center
 }
 
-@media not all and (min-width: 768px) {
-  .sect4 img {
-    width: 100%
-  }
-}
-
 .sect4 .choild {
   display: flex;
   max-width: 24rem;
@@ -52,7 +34,16 @@
   gap: 1.25rem
 }
 
-@media not all and (min-width: 768px) {
+@media (max-width: 768px) {
+  .sect4 > div,
+	.sect4 > div:nth-child(2) {
+    flex-direction: column-reverse
+  }
+
+  .sect4 img {
+    width: 100%
+  }
+
   .sect4 .choild {
     max-width: none
   }
