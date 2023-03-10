@@ -1,0 +1,35 @@
+.sect6 {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 37 36 / var(--tw-bg-opacity));
+  padding: 2.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+
+.sect6 > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem
+}
+
+.sect6 > div:nth-child(2) {
+  display: flex;
+  gap: 1.25rem
+}
+
+.sect6 .card {
+  display: flex;
+  width: 33.333333%;
+  flex: 1 1 0%;
+  flex-direction: column
+}
+
+.sect6 .card li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 2
+}

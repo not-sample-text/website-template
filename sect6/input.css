@@ -1,0 +1,19 @@
+.sect6 {
+	@apply bg-stone-800 text-white p-10 flex flex-col gap-10;
+}
+
+.sect6 > div:first-child {
+	@apply flex flex-col gap-5;
+}
+
+.sect6 > div:nth-child(2) {
+	@apply flex gap-5;
+}
+
+.sect6 .card {
+	@apply flex flex-1 flex-col w-1/3;
+}
+
+.sect6 .card li {
+	@apply flex flex-row items-center leading-loose;
+}
