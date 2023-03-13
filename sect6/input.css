@@ -8,20 +8,33 @@
 
 .sect6 > div:nth-child(2) {
 	@apply flex gap-10;
+	@apply max-md:flex-col;
 }
 
 .sect6 .card {
-	@apply flex flex-1 flex-col leading-9 bg-white text-black rounded-3xl p-1.5;
+	@apply flex flex-1 flex-col bg-white text-[#333] rounded-3xl;
+}
+
+.sect6 .card-title {
+	@apply text-lg;
+}
+
+.sect6 .card > div {
+	@apply p-3 flex flex-col gap-5;
 }
 
 .sect6 .card img {
-	@apply rounded-t-3xl;
+	@apply rounded-t-3xl mx-auto;
 }
 
 .sect6 .card span {
-	@apply flex flex-row items-center gap-2;
+	@apply flex flex-row items-center gap-1;
 }
 
 .sect6 .card i {
-	@apply text-3xl;
+	@apply font-bold text-lg leading-snug text-emerald-500;
+}
+
+.sect6 .card .more {
+	@apply text-blue-800 font-semibold text-lg;
 }
