@@ -526,7 +526,7 @@ video {
   line-height: 1.75rem;
 }
 
-section a{
+section a.butt{
   display: inline-block;
   width: -moz-max-content;
   width: max-content;
@@ -534,6 +534,13 @@ section a{
   --tw-bg-opacity: 1;
   background-color: rgb(30 64 175 / var(--tw-bg-opacity));
   padding: 0.75rem;
+  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media not all and (min-width: 768px){
+  .desc{
+    max-width: none;
+  }
 }
