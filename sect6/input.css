@@ -3,24 +3,30 @@
 }
 
 .sect6 > div:first-child {
-	@apply flex flex-col gap-5;
+	@apply flex flex-col gap-5 mx-auto text-center;
 }
 
 .sect6 > div:nth-child(2) {
-	@apply flex gap-10;
+	@apply flex gap-5 mx-auto;
 	@apply max-md:flex-col;
 }
 
 .sect6 .card {
-	@apply flex flex-1 flex-col bg-white text-[#333] rounded-3xl;
+	@apply flex flex-1 flex-col bg-white text-[#333] rounded-3xl max-w-sm;
+	@apply max-md:max-w-none;
 }
 
 .sect6 .card-title {
 	@apply text-lg;
 }
 
+.card:hover .card-title,
+.card:hover .more {
+	@apply underline;
+}
+
 .sect6 .card > div {
-	@apply p-3 flex flex-col gap-5;
+	@apply p-5 flex flex-col gap-5;
 }
 
 .sect6 .card img {
