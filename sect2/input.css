@@ -1,6 +1,6 @@
 .sect2 {
 	font-family: "Roboto";
-	@apply bg-stone-800 text-white flex gap-x-32 p-10 justify-center items-center;
+	@apply bg-[#333] text-white flex gap-x-32 p-10 justify-center items-center;
 }
 
 .sect2 > div {
